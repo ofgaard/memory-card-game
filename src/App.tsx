@@ -1,23 +1,17 @@
 import { useState } from 'react'
 import useGifs from './hooks/useGifs'
-
+import Gameboard from './components/Gameboard'
 
 function App() {
- const gifs = useGifs();
+
 
 
   return (
-    <>
-     <div>
+    <div className='flex flex-col items-center h-screen bg-neutral-800 p-10'>
 
-                {gifs.map((gif) => (
-                    
-                        <img src={gif.images.fixed_height.url} />
-      
-                ))}
-            </div>
+     <Gameboard/>
 
-    </>
+    </div>
   )
 }
 
